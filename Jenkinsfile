@@ -36,7 +36,7 @@ echo "(*******)"
 	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$Push',
 	                pushVersion: '2.0.${BUILD_NUMBER}',
 	                //baseDir: '/var/jenkins_home/workspace/JPetStore/target',
-			 baseDir: 'D:/Installables/Jenkins/workspace/UOB/JPetStore-db/src/database/',
+			 baseDir: '/var/lib/jenkins/workspace/UOB/JPetStore-db-comp/src/database/',
 	                fileIncludePatterns: '**/*.sql',
 	                fileExcludePatterns: '',
 	               // pushProperties: 'jenkins.server=Jenkins-app\njenkins.reviewed=false',

@@ -26,11 +26,11 @@ echo "(*******)"
 	        siteName: 'UCD_Local',
 	        component: [
 	            $class: 'com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock',
-	            componentName: 'JPetStoreUOB-db-Component',
+	            componentName: 'Distributed-db-Component',
 	            createComponent: [
 	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock',
 	                componentTemplate: '',
-	                componentApplication: 'JPetStore-UOB'
+	                componentApplication: 'HCL-Distributed'
 	            ],
 	            delivery: [
 	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$Push',

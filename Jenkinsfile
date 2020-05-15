@@ -20,30 +20,30 @@ node {
 
 	
 echo "(*******)"	
-  stage('Publish Artificats to UCD'){
+ // stage('Publish Artificats to UCD'){
 	  
-   step([$class: 'UCDeployPublisher',
-	        siteName: 'UCD_Local',
-	        component: [
-	            $class: 'com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock',
-	            componentName: 'DBComponent',
-	            createComponent: [
-	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock',
-	                componentTemplate: '',
-	                componentApplication: 'HCL-Distributed'
-	            ],
-	            delivery: [
-	                $class: 'com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$Push',
-	                pushVersion: '2.0.${BUILD_NUMBER}',
+   //step([$class: 'UCDeployPublisher',
+	//        siteName: 'UCD_Local',
+	  //      component: [
+	    //        $class: 'com.urbancode.jenkins.plugins.ucdeploy.VersionHelper$VersionBlock',
+	      //      componentName: 'DBComponent',
+	        //    createComponent: [
+	          //      $class: 'com.urbancode.jenkins.plugins.ucdeploy.ComponentHelper$CreateComponentBlock',
+	            //    componentTemplate: '',
+	              //  componentApplication: 'HCL-Distributed'
+	            //],
+	            //delivery: [
+	             //   $class: 'com.urbancode.jenkins.plugins.ucdeploy.DeliveryHelper$Push',
+	               // pushVersion: '2.0.${BUILD_NUMBER}',
 	                //baseDir: '/var/jenkins_home/workspace/JPetStore/target',
-			 baseDir: '/var/lib/jenkins/workspace/HCL-Demo/Distributed-JPetStore-db/src/database/',
-	                fileIncludePatterns: '**/*.sql',
-	                fileExcludePatterns: '',
+			// baseDir: '/var/lib/jenkins/workspace/HCL-Demo/Distributed-JPetStore-db/src/database/',
+	               // fileIncludePatterns: '**/*.sql',
+	               // fileExcludePatterns: '',
 	               // pushProperties: 'jenkins.server=Jenkins-app\njenkins.reviewed=false',
-	                pushDescription: 'Pushed from Jenkins'
-	            ]
-	        ]
-     ])
+	               // pushDescription: 'Pushed from Jenkins'
+	        //    ]
+	       // ]
+     //])
 	  
 		//sh 'env > env.txt'
 	//	readFile('env.txt').split("\r?\n").each {
@@ -79,11 +79,11 @@ echo "(*******)"
 
  }
 	
-stage ('wait for deploy') {
-	sleep 5
+//stage ('wait for deploy') {
+//	sleep 5
 	// echo 'Executing HCL One test ... '
 	//sh '/var/jenkins_home/onetest/hcl-onetest-command.sh'
- }	
+// }	
 
 }
 
